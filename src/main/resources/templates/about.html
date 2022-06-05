@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>about</title>
+    <link rel = "stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /*body {*/
+        /*    font-family: Arial;*/
+        /*    margin: 0 auto; !* Center website *!*/
+        /*    max-width: 800px; !* Max width *!*/
+        /*    padding: 20px;*/
+        /*}*/
+
+        .heading {
+            font-size: 25px;
+            margin-right: 25px;
+        }
+
+        .fa {
+            font-size: 25px;
+        }
+
+        .checked {
+            color: orange;
+        }
+
+        /* Three column layout */
+        .side {
+            float: left;
+            width: 15%;
+            margin-top:10px;
+        }
+
+        .middle {
+            margin-top:10px;
+            float: left;
+            width: 70%;
+        }
+
+        /* Place text to the right */
+        .right {
+            text-align: right;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* The bar container */
+        .bar-container {
+            width: 100%;
+            background-color: #f1f1f1;
+            text-align: center;
+            color: white;
+        }
+
+        /* Individual bars */
+        .bar-6 {width: 90%; height: 18px; background-color: #04AA6D;}
+        .bar-5 {width: 80%; height: 18px; background-color: #04AA6D;}
+        .bar-4 {width: 60%; height: 18px; background-color: #2196F3;}
+        .bar-3 {width: 50%; height: 18px; background-color: #00bcd4;}
+        .bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+        .bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+        /* Responsive layout - make the columns stack on top of each other instead of next to each other */
+        @media (max-width: 400px) {
+            .side, .middle {
+                width: 100%;
+            }
+            .right {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large"
+            onclick="w3_close()">Close &times;</button>
+    <a th:href="@{/home}" class="w3-bar-item w3-button">Dashboard</a>
+    <a th:href="@{/about}" class="w3-bar-item w3-button">About David</a>
+    <a th:href="@{/project}" class="w3-bar-item w3-button">Project</a>
+    <a th:href="@{/awards}" class="w3-bar-item w3-button">Awards</a>
+</div>
+
+<div id="main">
+
+    <div class="w3-teal">
+        <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container">
+            <h1>About</h1>
+        </div>
+    </div>
+
+    <!--    <img src="img_car.jpg" alt="Car" style="width:100%">-->
+
+    <div class="w3-container">
+       <i> <p> I have over 4 years in the ATM industry with expertise in over 4 brands of ATMs; NCR, Wincor Nixdorf, GRG and Hyosung models.</p>
+        <p> With my proficiency in Power BI and Excel, I have also served in Data Analytics role in my Teams where I design Power BI dashboards and analyse performance of individuals or vendors</p>
+        <p>Currently, I'm into software engineering and development to resolve pressing issues within any space.</p>
+
+       </i>
+
+
+        <u><h1>Educational Status</h1></u>
+        <p> Emeka has a B.Tech degree from an indigenous university in Nigeria(FUTO). He graduated with a second class upper degree in Mathematics </p>
+<p>Emeka also has a diploma in Web Application development which has been helpful in his software development journey </p>
+
+
+        <u><h1>Skills</h1></u>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <hr style="border:3px solid #f1f1f1">
+
+        <div class="row">
+            <div class="side">
+                <div>Spring Boot</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-5"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>80</div>
+            </div>
+
+
+            <div class="side">
+                <div>Java</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-4"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>70</div>
+            </div>
+
+
+            <div class="side">
+                <div>Javascript</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-3"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>50</div>
+            </div>
+            <div class="side">
+                <div>Data Anaysis</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-6"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>90</div>
+            </div>
+            <div class="side">
+                <div>Power BI</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-6"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>90</div>
+            </div>
+            <div class="side">
+                <div>PHP</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                    <div class="bar-6"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>90</div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <u><h1>Work Experience</h1></u>
+
+        <br>
+        <h3><b>Union Bank of Nigeria(May 2022 - Present) - Core Programmers</b></h3>
+        <ul>
+            <li>Software Development</li>
+            <li>SOAP/REST API development</li>
+            <li>Application development</li>
+            <li>Working in line with the Business Team to develop applications needed to boost the Business</li>
+
+
+        </ul>
+        <br>
+
+
+        <h3><b>Union Bank of Nigeria(2019-2022) - ATM Software Support</b></h3>
+        <ul>
+            <li>Software support to all ATMs</li>
+            <li>Application support of ATM applications</li>
+            <li>Development of ATM software applications</li>
+            <li>Managing projects done by the Team or vendors for the ATMs </li>
+            <li>Data Analysis using Power BI and Excel</li>
+
+        </ul>
+        <br>
+
+        <h3><b>Universal Horizon Limited(2017-2019)</b></h3>
+        <ul>
+            <li>Hardware and software support to all ATMs within my purview</li>
+            <li>Carrying out preventive maintenance on all ATMs</li>
+            <li>Ensuring the Bank's approved image is running on all ATMs</li>
+
+        </ul>
+
+
+    </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+<script>
+    function w3_open() {
+        document.getElementById("main").style.marginLeft = "25%";
+        document.getElementById("mySidebar").style.width = "25%";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("openNav").style.display = 'none';
+    }
+    function w3_close() {
+        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
+    }
+</script>
+
+<footer>
+
+<a th:href="@{/cv.pdf}" download><b>Click to download complete Resume</b></a>
+
+</footer>
+
+</body>
+</html>

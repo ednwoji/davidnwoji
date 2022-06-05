@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>projects</title>
+    <link rel = "stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+</head>
+<body>
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large"
+            onclick="w3_close()">Close &times;</button>
+    <a th:href="@{/home}" class="w3-bar-item w3-button">Dashboard</a>
+    <a th:href="@{/about}" class="w3-bar-item w3-button">About David</a>
+    <a th:href="@{/project}" class="w3-bar-item w3-button">Project</a>
+    <a th:href="@{/awards}" class="w3-bar-item w3-button">Awards</a>
+</div>
+
+<div id="main">
+
+    <div class="w3-teal">
+        <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container">
+            <h1>Projects</h1>
+        </div>
+    </div>
+
+
+
+
+
+
+<!--    <img th:src="@{/images/dave2.jpg}" alt="dave" style=" width: 100%; height:800px;"/>-->
+    <!--   <img src="img_car.jpg" alt="Car" style="width:100%">-->
+
+    <div class="w3-container">
+        <article>
+        <p><h2><b>Hi! Welcome to my projects page</b></h2></p>
+        <p><i>Here, you'll see number of projects carried out and the stacks used to develop them</i></p>
+        </article>
+    </div>
+
+    <ul>
+
+        <li><h3>Union Archival Project</h3></li>
+      <p><b> Background</b>: All ATMs keeps records of activities done on them. They record all activities done on them as a log file. The ATM also captures footages of all customers using the ATMs at every point in time. These files(Journals and footages are stored on the ATMs and used for daily reconciliation of the ATM</p>
+   <p>This means that if due to unforeseen circumstances, the logs and footages goes missing, reconciliation becomes difficult and what this also means is that if a customer comes with a dispute claim of failed dispense, there wil be no record to prove if the dispense error happened or not</p>
+        <p>CBN(Apex Bank) also has a policy that Banks are to store records of transactions/customers for at most 5 years so any customer who comes with a claim withein 5 years can sue the Bank if he does not have access to his records</p>
+    <p>These issues birthed the idea of developing this application for Union Bank. The app was developed singlehandedly by Emeka in 3 months and is currently in use by Union Bank</p>
+
+        <p> <b>Stack Used</b>: Core PHP, Javascript</p>
+        <p><b>Cost Savings for the Bank</b>: 20 Million annually paid to the former vendor supporting the existing app was stopped and saved. </p>
+
+
+        <li><h3>Journal Skipping Project</h3></li>
+        <p><b>Background</b>: From above project, we talked about journals and its importance in reconciliation of the ATM. Absence of this journal leads to financial exposure and loss of funds as funds are blindly reversed as dispute comes up whether it is genuine or not</p>
+   <p>This issue is peculiar to NCR ATMs where the journals just vanishes and then we see just blank journals for each day on NCR ATMs. This issue has caused serious financial exposures leading to losses in the Bank. These issues are what birthed the idea of coming up with a solution</p>
+    <p>The journal skipping application is capable of retrieving the lost journals and make them available for any reconciliation</p>
+
+        <p> <b>Stack Used</b>: Core Java</p>
+        <p><b>Cost Savings for the Bank</b>: No proper records of this but a lot have been saved by this solution</p>
+
+
+        <li><h3>Inventory Application</h3></li>
+        <p><b>Background</b>:Record keeping have proven to be one major concern in any organization. This issue has caused quite a lot of funds and resources misappropriation.</p>
+        <p>This concern birthed the idea of developing an inventory application that can keep proper records of all devices owned by the Bank</p>
+
+        <p> <b>Stack Used</b>: Core PHP</p>
+        <p><b>Cost Savings for the Bank</b>: No proper records of this but a lot have been saved by this solution</p>
+
+
+        <li><h3>Personal Page</h3></li>
+        <p><b>Background</b>: This is just to make you know more about me. This page was created using Spring Boot/p>
+        <p>I use Spring Boot more for backend applications and APIs but i decided to try out using Spring Boot to create a webpage too</p>
+
+        <p> <b>Stack Used</b>: Spring Boot</p>
+        <p><b>Cost Savings for the Bank</b>: Nil</p>
+
+
+    </ul>
+
+</div>
+
+<script>
+    function w3_open() {
+        document.getElementById("main").style.marginLeft = "25%";
+        document.getElementById("mySidebar").style.width = "25%";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("openNav").style.display = 'none';
+    }
+    function w3_close() {
+        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
+    }
+</script>
+
+</body>
+</html>

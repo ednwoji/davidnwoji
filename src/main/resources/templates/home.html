@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>homepage</title>
+    <link rel = "stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container{
+
+
+            font-family: Broadway;
+
+        }
+
+        .fa {
+            /*padding: 20px;*/
+            /*font-size: 30px;*/
+            /*width: 50px;*/
+            /*text-align: center;*/
+            /*text-decoration: none;*/
+            /*margin: 5px 5px;*/
+
+            /*float: left;*/
+            /*width: 20%;*/
+            /*height: 40%;*/
+            /*padding: 5px;*/
+
+
+        }
+
+        .footer-down {
+padding-left: 600px;
+            display:flex;
+            text-align: center;
+
+            width: 100%;
+
+        }
+
+
+        .fa { background-color: #39add1;
+            margin-top: 34px;
+            height: 50px;
+            width: 70px;
+            border-radius: 5px;
+            position: relative;
+        text-align: center;}
+        .fa::after { content: "";
+            display: flex;
+            text-align: center;
+            width: 150px;
+            height: 90px;
+            background-size: 100%;
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .img-container {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large"
+            onclick="w3_close()">Close &times;</button>
+    <a th:href="@{/home}" class="w3-bar-item w3-button">Dashboard</a>
+    <a th:href="@{/about}" class="w3-bar-item w3-button">About David</a>
+    <a th:href="@{/project}" class="w3-bar-item w3-button">Project</a>
+    <a th:href="@{/awards}" class="w3-bar-item w3-button">Awards</a>
+</div>
+
+<div id="main">
+
+    <div class="w3-teal">
+        <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container">
+            <h1>Home page</h1>
+        </div>
+    </div>
+
+
+
+
+
+
+<!--    <img th:src="@{/images/dave2.jpg}" alt="dave" style=" width: 100%; height:800px;"/>-->
+<!--<img src="img_car.jpg" alt="Car" style="width:100%">-->
+
+
+    <div class="clearfix">
+        <div class="img-container">
+            <img th:src="@{/images/dave1.jpg}" alt="Italy" style="width:100%">
+        </div>
+        <div class="img-container">
+            <img th:src="@{/images/dave5.jpg}" alt="Forest" style="width:100%">
+        </div>
+        <div class="img-container">
+            <img th:src="@{/images/dave6.jpg}" alt="Mountains" style="width:100%">
+        </div>
+    </div>
+
+
+    <div class="container">
+        <p><h2><b>Hello! Welcome to Dave's Page!</b></h2></p>
+        <p><h3>You want to know more about me? Let's go! Click on the three lines by the top left corner</h3></p>
+    </div>
+
+</div>
+
+<script>
+    function w3_open() {
+        document.getElementById("main").style.marginLeft = "25%";
+        document.getElementById("mySidebar").style.width = "25%";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("openNav").style.display = 'none';
+    }
+    function w3_close() {
+        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
+    }
+</script>
+
+<footer class = "footer-down">
+
+
+   <a th:href="@{https://www.linkedin.com/in/david-emeka-nwoji-4bb33713b}" target = "_blank" class="fa fa-linkedin"></a>
+    <a th:href="@{https://web.facebook.com/davidnwoji/}" target = "_blank" class="fa fa-facebook"></a>
+
+
+</footer>
+
+</body>
+</html>

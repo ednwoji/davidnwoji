@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Awards</title>
+    <link rel = "stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .img-container {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large"
+            onclick="w3_close()">Close &times;</button>
+    <a th:href="@{/home}" class="w3-bar-item w3-button">Dashboard</a>
+    <a th:href="@{/about}" class="w3-bar-item w3-button">About David</a>
+    <a th:href="@{/project}" class="w3-bar-item w3-button">Project</a>
+    <a th:href="@{/awards}" class="w3-bar-item w3-button">Awards</a>
+</div>
+
+<div id="main">
+
+    <div class="w3-teal">
+        <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container">
+            <h1>Awards</h1>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="clearfix">
+        <div class="img-container">
+            <img th:src="@{/images/dave2.jpg}" alt="Italy" style="width:100%">
+        </div>
+        <div class="img-container">
+            <img th:src="@{/images/dave3.jpg}" alt="Forest" style="width:100%">
+        </div>
+        <div class="img-container">
+            <img th:src="@{/images/dave4.jpg}" alt="Mountains" style="width:100%">
+        </div>
+    </div>
+
+    <!--   <img src="img_car.jpg" alt="Car" style="width:100%">-->
+
+    <div class="w3-container">
+        <p><h2>Welcome to Emeka's Award Catalogue</h2></p>
+
+        <p>Projects carried out by Emeka have earned him quite a number of accolades where we was awarded for outstanding performances</p>
+    <ul>
+        <li><b>CIO Award 2021</b> - This award was presented by the CIO of Union Bank of Nigeria for an outstanding performance and innovations especially for the creation of the Union Archival Application</li>
+
+        <li><b>Union Bank Employee Recognition(UBER) Award 2022</b> - </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<script>
+    function w3_open() {
+        document.getElementById("main").style.marginLeft = "25%";
+        document.getElementById("mySidebar").style.width = "25%";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("openNav").style.display = 'none';
+    }
+    function w3_close() {
+        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
+    }
+</script>
+
+</body>
+</html>
